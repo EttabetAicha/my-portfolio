@@ -1,0 +1,237 @@
+@font-face {
+  font-family: "Monaco";
+  font-display: swap;
+  src: url("fonts/monaco.woff");
+}
+
+:root {
+  --terminal-font-color: #b0b2b6;
+  --terminal-output-color: #f6f6f6;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: sans-serif;
+  color: #333d54;
+  background-image: url("./picture/Hacker\ Wallpaper\ Desktop.jpeg");
+}
+
+footer,
+.hero-body {
+  background-color: transparent !important;
+}
+
+a {
+  color: inherit;
+  transition: color 0.08s linear;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+#canvas {
+  position: absolute;
+  height: 110vh;
+  top: -10vh;
+  right: 0;
+  left: 0;
+}
+
+.hero {
+  min-height: 100vh;
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  color: rgba(139, 180, 216, 0.94);
+}
+
+.terminal {
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: "Monaco", Consolas, Lucida Console, monospace;
+}
+
+.terminal-bar {
+  background-color: #eae8e9;
+  display: flex;
+  position: relative;
+}
+
+.dark-mode {
+  background: #0d0f17;
+  height: 42px;
+  align-items: center;
+}
+
+.dark-mode-text {
+  color: #bdb9bf !important;
+}
+
+.icon-btn {
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+}
+
+.terminal-bar > div.icon-btn:first-child {
+  margin-left: 16px;
+}
+
+.terminal-bar > div.icon-btn:not(:first-child) {
+  margin-left: 8px;
+}
+
+.terminal-bar > div.icon-btn:last-child {
+  margin-right: 0.6rem;
+}
+
+.close {
+  background-color: #f96256;
+  border: 1px solid #f65549;
+}
+
+.max {
+  background-color: #33c948;
+  border: 1px solid #2dbb41;
+}
+
+.min {
+  background-color: #fdbc3d;
+  border: 1px solid #ffb524;
+}
+
+.terminal-window {
+  min-height: 254px;
+  max-height: 60vh;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.primary-bg {
+  background-color: #14151a;
+}
+
+.shadow {
+  box-shadow: 0 50px 100px rgba(50, 50, 93, 0.15), 0 15px 35px rgba(50, 50, 93, 0.2), 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.terminal-bar-text {
+  position: absolute;
+  color: var(--terminal-font-color);
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.has-equal-height {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.terminal-output {
+  overflow-y: hidden;
+  overflow: auto;
+}
+
+.column-child {
+  flex: 1;
+}
+
+.terminal-line {
+  position: relative;
+  color: var(--terminal-font-color);
+}
+
+.output {
+  margin-bottom: 1rem;
+  color: var(--terminal-output-color);
+}
+
+.directory {
+  color: #75e1e7;
+  font-weight: 500;
+}
+
+.success {
+  color: #8dd39e;
+}
+
+.code,
+.error,
+.social,
+.fa-heart {
+  color: #e46009;
+  
+}
+
+.fa-heart {
+  padding-top: 0.5rem;
+}
+
+.dummy-keyboard {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.user-input {
+  position: relative;
+}
+
+.user-input::after {
+  display: block;
+  content: "";
+  width: 10px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 0;
+  right: -10px;
+  animation: blink 1s step-start 0s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.footer {
+  font-family: "Monaco", Consolas, Lucida Console, monospace;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .resume {
+    padding-bottom: 0.5rem;
+  }
+}
+
+/* INTRO ANIMATION */
+.columns {
+  animation: scale-in-ver-center 0.815s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes scale-in-ver-center {
+  0% {
+    transform-origin: top center;
+    transform: scaleY(0);
+    opacity: 1;
+  }
+  100% {
+    transform-origin: top center;
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
